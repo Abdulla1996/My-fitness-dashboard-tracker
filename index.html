@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="THE FORGE" />
+<meta name="theme-color" content="#0A0B0D" />
+<link rel="apple-touch-icon" href="data:image/png;base64,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" />
+<title>THE FORGE</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap');
+  :root{
+    --bg:#0A0B0D; --panel:#15171C; --panel2:#1B1E24; --line:#2A2E37;
+    --steel:#8A93A0; --text:#F4F2EE; --molten:#FF4D2E; --amber:#FFB020;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html,body{margin:0; padding:0;}
+  body{
+    background:radial-gradient(1200px 500px at 50% -10%, rgba(255,77,46,0.10), transparent 60%), var(--bg);
+    color:var(--text); font-family:'Inter',system-ui,sans-serif;
+    min-height:100vh; padding:max(18px,env(safe-area-inset-top)) 14px calc(60px + env(safe-area-inset-bottom));
+  }
+  .wrap{max-width:1040px; margin:0 auto;}
+  .anton{font-family:'Anton',sans-serif; letter-spacing:.5px; font-weight:400;}
+  .tnum{font-variant-numeric:tabular-nums;}
+  @keyframes fadeUp{from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:none}}
+  @keyframes emberPulse{0%,100%{opacity:.55} 50%{opacity:1}}
+  .rise{animation:fadeUp .45s ease both;}
+  .eyebrow{font-size:11px; letter-spacing:4px; font-weight:800; color:var(--molten);}
+  .h1{font-size:clamp(40px,12vw,76px); line-height:.92; margin-top:6px;}
+  .sub{color:var(--steel); font-weight:600; font-size:13px; margin-top:8px;}
+  .statcards{display:grid; grid-template-columns:repeat(4,1fr); gap:9px; margin-top:18px;}
+  .stat{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:13px 10px;}
+  .statv{font-size:clamp(22px,6.5vw,32px); line-height:1;}
+  .statl{font-size:9px; font-weight:800; letter-spacing:1px; color:var(--steel); margin-top:6px;}
+  .heatbar{height:10px; border-radius:6px; background:#1F222A; overflow:hidden; border:1px solid var(--line); margin-top:14px;}
+  .heatfill{height:100%; background:linear-gradient(90deg,#FF8A1F,#FF4D2E); transition:width .5s ease;}
+  .tabs{display:flex; gap:5px; margin-top:18px; background:var(--panel2); padding:5px; border-radius:14px; border:1px solid var(--line);}
+  .tab{cursor:pointer; flex:1; text-align:center; padding:11px 4px; border-radius:11px; font-weight:800; font-size:11px; letter-spacing:.6px; color:var(--steel); background:transparent; border:1px solid transparent; transition:all .2s ease;}
+  .tab.on{color:var(--text); background:var(--panel); border-color:var(--line);}
+  .grid{display:grid; gap:11px; margin-top:14px;}
+  @media(min-width:620px){.grid{grid-template-columns:1fr 1fr;}}
+  @media(min-width:920px){.grid{grid-template-columns:1fr 1fr 1fr;}}
+  .legend{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; font-size:10px; color:var(--steel); font-weight:600;}
+  .legend span{display:inline-flex; align-items:center; gap:4px;}
+  .daycard{background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:13px; transition:box-shadow .35s ease, border-color .35s ease;}
+  .daycard.ignited{border-color:#FF8A3D; box-shadow:0 0 0 1px rgba(255,138,61,.35), 0 0 32px -8px rgba(255,77,46,.55);}
+  .dhead{display:flex; align-items:center; justify-content:space-between; margin-bottom:11px;}
+  .pills{display:grid; grid-template-columns:repeat(6,1fr); gap:6px;}
+  .pill{cursor:pointer; border:1px solid var(--line); background:var(--panel2); border-radius:12px; padding:8px 2px; display:flex; flex-direction:column; align-items:center; gap:3px; transition:transform .12s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease; user-select:none;}
+  .pill:active{transform:scale(.93);}
+  .pill .ic{font-size:18px; filter:grayscale(.7) opacity(.6); transition:filter .2s ease;}
+  .pill .lb{font-size:8px; font-weight:800; letter-spacing:.4px; color:var(--steel);}
+  .pill.on{background:linear-gradient(160deg,#FF6A2C,#FF3B2E); border-color:#FF8A3D; box-shadow:0 0 0 1px rgba(255,138,61,.4), 0 6px 18px -6px rgba(255,77,46,.7);}
+  .pill.on .ic{filter:none;}
+  .pill.on .lb{color:#1A0E08;}
+  .narrow{max-width:760px; margin:14px auto 0;}
+  .pgday{cursor:pointer; width:100%; text-align:left; background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:14px 15px; color:var(--text); display:flex; align-items:center; justify-content:space-between; margin-bottom:11px;}
+  .chip{font-size:9px; font-weight:800; letter-spacing:.7px; padding:3px 7px; border-radius:6px; display:inline-block;}
+  .move{background:var(--panel2); border:1px solid var(--line); border-radius:12px; padding:11px 12px; margin-bottom:8px;}
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:16px;}
+  .wlabel{font-size:9px; font-weight:800; letter-spacing:.8px; color:var(--steel); margin-bottom:5px; display:block;}
+  .winput{background:var(--panel2); border:1px solid var(--line); border-radius:10px; padding:11px; color:var(--text); font-size:15px; font-family:'Inter',sans-serif; width:100%; outline:none; font-variant-numeric:tabular-nums;}
+  .winput:focus{border-color:#FF8A3D;}
+  .btn{cursor:pointer; background:linear-gradient(160deg,#FF6A2C,#FF3B2E); border:none; color:#1A0E08; font-weight:800; letter-spacing:1px; border-radius:12px; padding:13px; font-size:13px; width:100%;}
+  .btn:disabled{opacity:.4; cursor:not-allowed; filter:grayscale(.5);}
+  .btn:active:not(:disabled){transform:scale(.98);}
+  .btn.ghost{background:transparent; border:1px solid var(--line); color:var(--steel); font-weight:700; letter-spacing:.5px;}
+  .wtop{display:grid; grid-template-columns:1fr; gap:11px;}
+  @media(min-width:480px){.wtop{grid-template-columns:1.2fr 1fr;}}
+  .wopt{display:grid; grid-template-columns:1fr; gap:11px;}
+  @media(min-width:480px){.wopt{grid-template-columns:1fr 1fr 1fr;}}
+  .sertog{cursor:pointer; border-radius:9px; padding:7px 11px; font-size:10px; font-weight:800; letter-spacing:.6px; border:1px solid var(--line); background:var(--panel2); display:inline-flex; align-items:center; gap:7px; user-select:none;}
+  .sertog:active{transform:scale(.95);}
+  .dot{width:9px; height:9px; border-radius:50%;}
+  .row{display:flex; align-items:center; justify-content:space-between; background:var(--panel2); border:1px solid var(--line); border-radius:11px; padding:10px 13px;}
+  .delx{cursor:pointer; background:transparent; border:none; color:var(--steel); font-size:15px; padding:2px 6px;}
+  .delx:active{color:var(--molten);}
+  .gcompound{display:grid; grid-template-columns:1.4fr 1fr; gap:8px; margin-bottom:8px;}
+  .footer{text-align:center; margin-top:40px; font-size:10px; letter-spacing:2px; color:#3A3F49; font-weight:700;}
+  svg{display:block;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="rise">
+    <div class="eyebrow">30-DAY PROTOCOL · RECOMP</div>
+    <div class="anton h1">THE FORGE</div>
+    <div class="sub">105 KG · 19% BF · PHYSIQUE · <span style="color:var(--amber)">discipline heats the iron</span></div>
+    <div class="statcards" id="headerStats"></div>
+    <div class="heatbar"><div class="heatfill" id="heatfill" style="width:0%"></div></div>
+    <div class="tabs">
+      <div class="tab on" data-tab="tracker">TRACKER</div>
+      <div class="tab" data-tab="program">PROGRAM</div>
+      <div class="tab" data-tab="weight">WEIGHT</div>
+      <div class="tab" data-tab="gear">GEAR</div>
+      <div class="tab" data-tab="protocol">PROTOCOL</div>
+    </div>
+  </div>
+  <div id="content"></div>
+  <div class="footer">EARN THE PUMP · FORGE THE MONSTER</div>
+</div>
+
+<script>
+/* ===================== storage ===================== */
+var K = { tracker:"forge_tracker", weight:"forge_weight", gear:"forge_gear" };
+function load(k, fb){ try{ var v=localStorage.getItem(k); return v? JSON.parse(v): fb; }catch(e){ return fb; } }
+function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+/* ===================== constants ===================== */
+var DAYS = 30;
+var CYCLE = [
+  {name:"CHEST", color:"#FF4D2E"},
+  {name:"BACK", color:"#FF6A2C"},
+  {name:"LEGS", color:"#FF8A1F"},
+  {name:"SHOULDERS + ARMS", color:"#FFB020"},
+  {name:"REST", color:"#5B6B7A"}
+];
+function workoutFor(d){ return CYCLE[(d-1) % CYCLE.length]; }
+var METRICS = [
+  {key:"trained", label:"TRAIN", icon:"🏋️"},
+  {key:"diet", label:"DIET", icon:"🍽️"},
+  {key:"cardio", label:"CARDIO", icon:"🏃"},
+  {key:"steps", label:"STEPS", icon:"👟"},
+  {key:"abs", label:"ABS", icon:"🧱"},
+  {key:"sleep", label:"SLEEP", icon:"😴"}
+];
+var SERIES = [
+  {key:"weight", label:"WEIGHT", unit:"kg", color:"#FF4D2E", axis:"left"},
+  {key:"muscle", label:"MUSCLE MASS", unit:"kg", color:"#3FE08F", axis:"left"},
+  {key:"bodyfat", label:"BODY FAT", unit:"%", color:"#FFB020", axis:"pct"},
+  {key:"fatmass", label:"FAT MASS", unit:"kg", color:"#6FA8C9", axis:"left"}
+];
+var PHASE = {
+  PRIMER:{c:"#6FA8C9", t:"PRIMER"},
+  STRENGTH:{c:"#FF7A1F", t:"STRENGTH"},
+  VOLUME:{c:"#FFB020", t:"VOLUME"},
+  EXPLOSION:{c:"#FF3B2E", t:"EXPLOSION"},
+  ABS:{c:"#8A93A0", t:"CORE"}
+};
+var PROGRAM = [
+  {name:"CHEST", color:"#FF4D2E", moves:[
+    {n:1, ex:"Pec deck / cable fly", phase:"PRIMER", tech:"Constant tension · 2s peak squeeze (no failure)", sets:"2 × 20"},
+    {n:2, ex:"Incline barbell / DB press", phase:"STRENGTH", tech:"Cluster sets — 5 × (3+3+2), 15s intra-rest", sets:"5 sets"},
+    {n:3, ex:"Flat dumbbell press", phase:"VOLUME", tech:"Slow eccentric — 4s negative every rep", sets:"3 × 8–12"},
+    {n:4, ex:"Weighted dips / machine press", phase:"VOLUME", tech:"Rest-pause — failure, 15s, go again ×2", sets:"3 × 10–12"},
+    {n:5, ex:"Incline cable fly", phase:"VOLUME", tech:"Lengthened partials after full-rep failure", sets:"3 × 12–15"},
+    {n:6, ex:"Cable crossover", phase:"EXPLOSION", tech:"Triple drop set — strip 25% × 3 to failure", sets:"2 sets 💥"},
+    {n:7, ex:"Hanging leg raise (abs)", phase:"ABS", tech:"Slow, 2s hold at top", sets:"3 × 15–20"}
+  ]},
+  {name:"BACK", color:"#FF6A2C", moves:[
+    {n:1, ex:"Straight-arm pulldown", phase:"PRIMER", tech:"Constant tension · find the lat (no failure)", sets:"2 × 20"},
+    {n:2, ex:"Barbell / T-bar row", phase:"STRENGTH", tech:"Cluster sets — 5 × (3+3+2), 15s intra-rest", sets:"5 sets"},
+    {n:3, ex:"Weighted pull-up / lat pulldown", phase:"VOLUME", tech:"Rest-pause — failure, 15s, go again ×2", sets:"3 × 8–12"},
+    {n:4, ex:"Chest-supported row", phase:"VOLUME", tech:"1.5 reps — full rep + half rep each count", sets:"3 × 10–12"},
+    {n:5, ex:"Single-arm dumbbell row", phase:"VOLUME", tech:"Myo-reps — activation set, mini-sets of 4", sets:"3 × 10–12"},
+    {n:6, ex:"Straight-arm pulldown", phase:"EXPLOSION", tech:"Double drop set + 5s iso hold at bottom", sets:"2 sets 💥"},
+    {n:7, ex:"Rear delt fly", phase:"VOLUME", tech:"Lengthened partials at end of set", sets:"3 × 15–20"}
+  ]},
+  {name:"LEGS", color:"#FF8A1F", moves:[
+    {n:1, ex:"Leg extension", phase:"PRIMER", tech:"Constant tension · warm the knees (no failure)", sets:"2 × 20"},
+    {n:2, ex:"Back squat / hack squat", phase:"STRENGTH", tech:"Cluster sets — 5 × (3+3+2), 20s intra-rest", sets:"5 sets"},
+    {n:3, ex:"Romanian deadlift", phase:"VOLUME", tech:"Slow eccentric — 4s, drive the stretch", sets:"4 × 8–10"},
+    {n:4, ex:"Leg press", phase:"VOLUME", tech:"Drop set — strip plates ×3 on last set", sets:"3 × 10–15"},
+    {n:5, ex:"Lying / seated leg curl", phase:"VOLUME", tech:"Myo-reps — activation set + mini-sets of 4", sets:"4 × 10–15"},
+    {n:6, ex:"Leg extension", phase:"EXPLOSION", tech:"Triple drop set + partials past failure", sets:"2 sets 💥"},
+    {n:7, ex:"Standing calf raise", phase:"VOLUME", tech:"3s stretch pause at bottom each rep", sets:"4 × 10–15"},
+    {n:8, ex:"Seated calf raise", phase:"VOLUME", tech:"Lengthened partials to finish", sets:"3 × 15–20"}
+  ]},
+  {name:"SHOULDERS + ARMS", color:"#FFB020", moves:[
+    {n:1, ex:"Cable lateral raise", phase:"PRIMER", tech:"Constant tension · fill the side delt (no failure)", sets:"2 × 25"},
+    {n:2, ex:"Overhead press (DB / machine)", phase:"STRENGTH", tech:"Cluster sets — 5 × (3+3+2), 15s intra-rest", sets:"5 sets"},
+    {n:3, ex:"Dumbbell lateral raise", phase:"VOLUME", tech:"Drop set — down the rack ×3", sets:"4 × 12–20"},
+    {n:4, ex:"Reverse pec deck", phase:"VOLUME", tech:"Lengthened partials at end of set", sets:"3 × 15–20"},
+    {n:5, ex:"Barbell / EZ-bar curl", phase:"STRENGTH", tech:"Cluster sets — 4 × (2+2+2), 15s intra-rest", sets:"4 sets"},
+    {n:6, ex:"Close-grip bench / weighted dips", phase:"STRENGTH", tech:"Rest-pause — failure, 15s, go again ×2", sets:"4 × 6–8"},
+    {n:7, ex:"Incline DB curl + rope pushdown", phase:"VOLUME", tech:"Antagonist superset · 3s eccentric both", sets:"3 × 10–12"},
+    {n:8, ex:"Cable lateral raise", phase:"EXPLOSION", tech:"Giant set — lateral → front → rear, no rest", sets:"2 rounds 💥"},
+    {n:9, ex:"Wrist / reverse curl (forearms)", phase:"VOLUME", tech:"Myo-reps", sets:"2–3 × 15–20"}
+  ]}
+];
+var PROTOCOL = {
+  cardio:[
+    "LISS — 30–40 min incline walk / stairmaster, 4–5× per week",
+    "HIIT — 1×/week to start: 30s hard / 90s easy × 6–8 (cap at 2×/week)",
+    "Steps — 10–12k daily as your baseline fat-loss driver",
+    "Add cardio only when the scale stalls 2+ weeks — keep room to push"
+  ],
+  nutrition:[
+    "Deficit — modest, ~300–500 kcal under maintenance (slow loss protects muscle)",
+    "Protein — 250–280 g/day, non-negotiable on a cut",
+    "Carbs — keep them, time the bulk around training",
+    "Fats — 0.8–1 g/kg, don't crash them"
+  ],
+  rules:[
+    "Strength block stays 1 rep in reserve — protect joints & tendons",
+    "Cap true-failure techniques to volume + explosion moves only",
+    "Periodize: 4 wks strength-lean · 4 wks volume-lean · then deload",
+    "Bloodwork + BP checks while running gear — keep the monitoring tight"
+  ]
+};
+
+/* ===================== helpers ===================== */
+var MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function pad2(n){ return String(n).padStart(2,"0"); }
+function todayStr(){ var d=new Date(); return d.getFullYear()+"-"+pad2(d.getMonth()+1)+"-"+pad2(d.getDate()); }
+function fmtDate(s){ var p=s.split("-"); return MONTHS[parseInt(p[1],10)-1]+" "+parseInt(p[2],10); }
+function addDays(s, n){ var d=new Date(s+"T00:00:00"); d.setDate(d.getDate()+n); return d.getFullYear()+"-"+pad2(d.getMonth()+1)+"-"+pad2(d.getDate()); }
+function daysBetween(a,b){ return Math.round((new Date(b+"T00:00:00")-new Date(a+"T00:00:00"))/86400000); }
+function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];}); }
+
+function buildTracker(){ var t={}; for(var d=1;d<=DAYS;d++){ t[d]={}; METRICS.forEach(function(m){ t[d][m.key]=false; }); } return t; }
+
+/* ===================== state ===================== */
+var tracker = load(K.tracker, null) || buildTracker();
+(function(){ for(var d=1;d<=DAYS;d++){ if(!tracker[d]) tracker[d]={}; METRICS.forEach(function(m){ if(typeof tracker[d][m.key]!=="boolean") tracker[d][m.key]=false; }); } })();
+var weights = load(K.weight, []);
+var gear = load(K.gear, { compounds:[{name:"",dose:""},{name:"",dose:""},{name:"",dose:""},{name:"",dose:""}], interval:3, log:[] });
+if(!gear.compounds) gear.compounds=[{name:"",dose:""},{name:"",dose:""},{name:"",dose:""},{name:"",dose:""}];
+if(!gear.log) gear.log=[];
+if(!gear.interval) gear.interval=3;
+var show = { weight:true, muscle:true, bodyfat:true, fatmass:true };
+var activeTab = "tracker";
+var openDay = null;
+var content = document.getElementById("content");
+
+/* ===================== header stats ===================== */
+function computeStats(){
+  var trained=0, totalChecks=0, perfect=0, best=0, run=0, trainTotal=0;
+  for(var d=1; d<=DAYS; d++){
+    var w=workoutFor(d), day=tracker[d], checks=0;
+    METRICS.forEach(function(m){ if(day[m.key]) checks++; });
+    totalChecks+=checks; if(checks===METRICS.length) perfect++;
+    if(w.name!=="REST"){ trainTotal++; if(day.trained){ run++; if(run>best) best=run; trained++; } else run=0; }
+  }
+  return { trained:trained, trainTotal:trainTotal, perfect:perfect, best:best,
+           consistency:Math.round(totalChecks/(DAYS*METRICS.length)*100) };
+}
+function renderHeader(){
+  var s=computeStats();
+  var cards=[
+    {v:s.trained+"/"+s.trainTotal, l:"TRAINED"},
+    {v:s.best+(s.best>0?" 🔥":""), l:"BEST STREAK", fire:true},
+    {v:s.perfect, l:"PERFECT DAYS"},
+    {v:s.consistency+"%", l:"CONSISTENCY"}
+  ];
+  document.getElementById("headerStats").innerHTML = cards.map(function(c){
+    return '<div class="stat"><div class="anton tnum statv" style="color:'+(c.fire?"var(--molten)":"var(--text)")+'">'+c.v+'</div><div class="statl">'+c.l+'</div></div>';
+  }).join("");
+  document.getElementById("heatfill").style.width = s.consistency+"%";
+}
+
+/* ===================== tabs ===================== */
+function setTab(t){
+  activeTab=t; openDay=null;
+  var tabs=document.querySelectorAll(".tab");
+  for(var i=0;i<tabs.length;i++){ tabs[i].classList.toggle("on", tabs[i].dataset.tab===t); }
+  renderTab();
+}
+var tabEls=document.querySelectorAll(".tab");
+for(var i=0;i<tabEls.length;i++){ (function(el){ el.addEventListener("click", function(){ setTab(el.dataset.tab); }); })(tabEls[i]); }
+
+function renderTab(){
+  if(activeTab==="tracker") renderTrackerTab();
+  else if(activeTab==="program") renderProgramTab();
+  else if(activeTab==="weight") renderWeightTab();
+  else if(activeTab==="gear") renderGearTab();
+  else if(activeTab==="protocol") renderProtocolTab();
+}
+
+/* ===================== TRACKER ===================== */
+function renderTrackerTab(){
+  var html='<div class="rise narrow" style="max-width:1040px"><div class="legend">';
+  METRICS.forEach(function(m){ html+='<span><span style="font-size:13px">'+m.icon+'</span>'+m.label+'</span>'; });
+  html+='</div><div class="grid" id="trackerGrid"></div>';
+  html+='<div style="display:flex; justify-content:center; margin-top:24px"><button class="btn ghost" id="resetBtn" style="width:auto; padding:8px 16px">RESET MONTH</button></div></div>';
+  content.innerHTML=html;
+  drawTrackerGrid();
+  document.getElementById("resetBtn").addEventListener("click", function(){
+    if(confirm("Clear all 30 days of tracking?")){ tracker=buildTracker(); save(K.tracker,tracker); drawTrackerGrid(); renderHeader(); }
+  });
+}
+function drawTrackerGrid(){
+  var g=document.getElementById("trackerGrid"); var html="";
+  for(var d=1; d<=DAYS; d++){
+    var w=workoutFor(d), day=tracker[d], filled=0;
+    METRICS.forEach(function(m){ if(day[m.key]) filled++; });
+    var ignited=filled===METRICS.length, isRest=w.name==="REST";
+    html+='<div class="daycard'+(ignited?" ignited":"")+'"><div class="dhead"><div style="display:flex; align-items:baseline; gap:9px">'+
+      '<span class="anton tnum" style="font-size:22px; color:var(--steel)">'+pad2(d)+'</span>'+
+      '<span style="font-weight:800; font-size:12px; letter-spacing:.6px; color:'+w.color+'">'+w.name+'</span></div>'+
+      '<span style="font-size:10px; font-weight:700; color:'+(ignited?"var(--molten)":"var(--steel)")+'">'+(ignited?"🔥 ON FIRE":filled+"/6")+'</span></div><div class="pills">';
+    METRICS.forEach(function(m){
+      var on=day[m.key], restTrain=isRest&&m.key==="trained";
+      html+='<div class="pill'+(on?" on":"")+'" data-d="'+d+'" data-k="'+m.key+'"'+((restTrain&&!on)?' style="opacity:.45"':'')+'>'+
+        '<span class="ic">'+m.icon+'</span><span class="lb">'+(restTrain?"REST":m.label)+'</span></div>';
+    });
+    html+='</div></div>';
+  }
+  g.innerHTML=html;
+  var pills=g.querySelectorAll(".pill");
+  for(var i=0;i<pills.length;i++){ (function(p){ p.addEventListener("click", function(){
+    var d=p.dataset.d, k=p.dataset.k; tracker[d][k]=!tracker[d][k]; save(K.tracker,tracker); drawTrackerGrid(); renderHeader();
+  }); })(pills[i]); }
+}
+
+/* ===================== PROGRAM ===================== */
+function renderProgramTab(){
+  var html='<div class="rise narrow">';
+  html+='<div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px">';
+  ["PRIMER","STRENGTH","VOLUME","EXPLOSION"].forEach(function(p){ var ph=PHASE[p];
+    html+='<span class="chip" style="background:rgba(255,255,255,.04); color:'+ph.c+'; border:1px solid '+ph.c+'55">'+ph.t+'</span>'; });
+  html+='<span style="font-size:10px; color:var(--steel); align-self:center">cool → hot · prime, lift heavy, build, explode 💥</span></div>';
+  PROGRAM.forEach(function(d, idx){
+    html+='<button class="pgday" data-idx="'+idx+'"><span style="display:flex; align-items:baseline; gap:11px">'+
+      '<span class="anton" style="font-size:20px; color:'+d.color+'">'+pad2(idx+1)+'</span>'+
+      '<span style="font-weight:800; letter-spacing:.6px; font-size:15px">'+d.name+'</span></span>'+
+      '<span style="color:var(--steel); font-size:18px">'+(openDay===idx?"–":"+")+'</span></button>';
+    if(openDay===idx){
+      html+='<div class="rise" style="margin-bottom:11px">';
+      d.moves.forEach(function(mv){ var ph=PHASE[mv.phase];
+        html+='<div class="move"><div style="display:flex; align-items:center; gap:9px; margin-bottom:5px">'+
+          '<span class="anton tnum" style="font-size:16px; color:var(--steel); min-width:20px">'+mv.n+'</span>'+
+          '<span style="font-weight:700; font-size:13.5px; flex:1">'+mv.ex+'</span>'+
+          '<span class="chip" style="background:'+ph.c+'1f; color:'+ph.c+'">'+ph.t+'</span></div>'+
+          '<div style="padding-left:29px; display:flex; justify-content:space-between; gap:10px; align-items:baseline">'+
+          '<span style="font-size:12px; color:#C9CDD4; line-height:1.35">'+mv.tech+'</span>'+
+          '<span class="tnum" style="font-size:11px; font-weight:700; color:var(--steel); white-space:nowrap">'+mv.sets+'</span></div></div>';
+      });
+      html+='</div>';
+    }
+  });
+  html+='<div style="margin-top:4px; font-size:11px; color:var(--steel); line-height:1.5; padding:0 4px">'+
+    '<b style="color:var(--text)">Coach note:</b> the primer and heavy strength sets are NOT taken to failure — that\'s where injuries come from. True failure lives in the volume and explosion moves. One explosion per session, then move on.</div></div>';
+  content.innerHTML=html;
+  var btns=content.querySelectorAll(".pgday");
+  for(var i=0;i<btns.length;i++){ (function(b){ b.addEventListener("click", function(){
+    var idx=parseInt(b.dataset.idx,10); openDay=(openDay===idx?null:idx); renderProgramTab();
+  }); })(btns[i]); }
+}
+
+/* ===================== WEIGHT ===================== */
+function renderWeightTab(){
+  var html='<div class="rise narrow"><div class="card" style="margin-bottom:16px">'+
+    '<div class="anton" style="font-size:18px; color:var(--molten); margin-bottom:13px">LOG A WEIGH-IN</div>'+
+    '<div class="wtop" style="margin-bottom:11px">'+
+      '<div><label class="wlabel">DATE</label><input class="winput" type="date" id="wDate" value="'+todayStr()+'"></div>'+
+      '<div><label class="wlabel">WEIGHT (KG) *</label><input class="winput" type="number" inputmode="decimal" id="wWeight" placeholder="105.0"></div></div>'+
+    '<div class="wopt" style="margin-bottom:14px">'+
+      '<div><label class="wlabel" style="color:#3FE08F">MUSCLE (KG)</label><input class="winput" type="number" inputmode="decimal" id="wMuscle" placeholder="optional"></div>'+
+      '<div><label class="wlabel" style="color:#FFB020">BODY FAT (%)</label><input class="winput" type="number" inputmode="decimal" id="wBodyfat" placeholder="optional"></div>'+
+      '<div><label class="wlabel" style="color:#6FA8C9">FAT MASS (KG)</label><input class="winput" type="number" inputmode="decimal" id="wFatmass" placeholder="optional"></div></div>'+
+    '<button class="btn" id="wLog">UPDATE GRAPH</button></div>'+
+    '<div id="wBody"></div></div>';
+  content.innerHTML=html;
+  document.getElementById("wLog").addEventListener("click", function(){
+    var wv=parseFloat(document.getElementById("wWeight").value);
+    var date=document.getElementById("wDate").value;
+    if(!date || isNaN(wv) || wv<=0) return;
+    function num(id){ var v=document.getElementById(id).value; return (v!=="" && !isNaN(parseFloat(v)))? parseFloat(v): null; }
+    var entry={ date:date, weight:wv, muscle:num("wMuscle"), bodyfat:num("wBodyfat"), fatmass:num("wFatmass") };
+    weights=weights.filter(function(e){ return e.date!==entry.date; });
+    weights.push(entry); weights.sort(function(a,b){ return a.date<b.date?-1:1; });
+    save(K.weight,weights);
+    document.getElementById("wWeight").value=""; document.getElementById("wMuscle").value="";
+    document.getElementById("wBodyfat").value=""; document.getElementById("wFatmass").value="";
+    drawWeightBody();
+  });
+  drawWeightBody();
+}
+function drawWeightBody(){
+  var body=document.getElementById("wBody");
+  if(!weights.length){ body.innerHTML='<div style="text-align:center; padding:40px 20px; color:var(--steel)"><div class="anton" style="font-size:22px; color:#3A3F49">NO DATA YET</div><div style="font-size:13px; margin-top:8px">Log your first weigh-in above and the graph appears here.</div></div>'; return; }
+  var first=weights[0], last=weights[weights.length-1], delta=Math.round((last.weight-first.weight)*10)/10;
+  var html='<div style="display:grid; grid-template-columns:repeat(3,1fr); gap:9px; margin-bottom:14px">'+
+    '<div class="stat"><div class="anton tnum" style="font-size:25px">'+last.weight+'<span style="font-size:12px; color:var(--steel)"> kg</span></div><div class="statl">LATEST</div></div>'+
+    '<div class="stat"><div class="anton tnum" style="font-size:25px; color:'+(delta<=0?"#3FE08F":"var(--molten)")+'">'+(delta>0?"+":"")+delta+'<span style="font-size:12px; color:var(--steel)"> kg</span></div><div class="statl">CHANGE</div></div>'+
+    '<div class="stat"><div class="anton tnum" style="font-size:25px; color:var(--amber)">'+(last.bodyfat!=null?last.bodyfat:"—")+(last.bodyfat!=null?'<span style="font-size:12px; color:var(--steel)"> %</span>':"")+'</div><div class="statl">BODY FAT</div></div></div>';
+  html+='<div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px" id="wToggles"></div>';
+  html+='<div class="card" style="padding:14px 6px 8px 0" id="wChart"></div>';
+  html+='<div style="margin-top:16px; display:flex; flex-direction:column; gap:8px" id="wHistory"></div>';
+  body.innerHTML=html;
+  drawToggles(); drawChart(); drawHistory();
+}
+function drawToggles(){
+  var t=document.getElementById("wToggles");
+  t.innerHTML=SERIES.map(function(s){ var on=show[s.key];
+    return '<div class="sertog" data-k="'+s.key+'" style="opacity:'+(on?1:.45)+'; border-color:'+(on?s.color+"66":"var(--line)")+'">'+
+      '<span class="dot" style="background:'+(on?s.color:"var(--steel)")+'"></span>'+
+      '<span style="color:'+(on?"var(--text)":"var(--steel)")+'; text-decoration:'+(on?"none":"line-through")+'">'+s.label+'</span></div>';
+  }).join("");
+  var chips=t.querySelectorAll(".sertog");
+  for(var i=0;i<chips.length;i++){ (function(c){ c.addEventListener("click", function(){ show[c.dataset.k]=!show[c.dataset.k]; drawToggles(); drawChart(); }); })(chips[i]); }
+}
+function drawChart(){
+  var el=document.getElementById("wChart");
+  var W=600, H=300, padL=40, padR=(show.bodyfat?40:14), padT=12, padB=28;
+  var plotW=W-padL-padR, plotH=H-padT-padB, n=weights.length;
+  var kgVals=[], pctVals=[];
+  weights.forEach(function(d){ ["weight","muscle","fatmass"].forEach(function(k){ if(show[k]&&d[k]!=null) kgVals.push(d[k]); }); if(show.bodyfat&&d.bodyfat!=null) pctVals.push(d.bodyfat); });
+  function scale(v){ if(!v.length) return null; var mn=Math.min.apply(null,v), mx=Math.max.apply(null,v); if(mn===mx){mn-=1;mx+=1;} var p=(mx-mn)*0.12; return {mn:mn-p, mx:mx+p}; }
+  var kg=scale(kgVals)||{mn:0,mx:1}, pct=scale(pctVals);
+  function x(i){ return padL + (n===1? plotW/2 : plotW*i/(n-1)); }
+  function yL(v){ return padT + plotH - ((v-kg.mn)/(kg.mx-kg.mn))*plotH; }
+  function yR(v){ return pct? padT + plotH - ((v-pct.mn)/(pct.mx-pct.mn))*plotH : 0; }
+  var svg='<svg viewBox="0 0 '+W+' '+H+'" width="100%" preserveAspectRatio="xMidYMid meet">';
+  for(var i=0;i<=4;i++){ var yy=padT+plotH*i/4, fr=1-i/4;
+    svg+='<line x1="'+padL+'" y1="'+yy+'" x2="'+(padL+plotW)+'" y2="'+yy+'" stroke="#2A2E37" stroke-dasharray="3 3"/>';
+    svg+='<text x="'+(padL-6)+'" y="'+(yy+4)+'" fill="#8A93A0" font-size="11" text-anchor="end">'+Math.round(kg.mn+(kg.mx-kg.mn)*fr)+'</text>';
+    if(pct){ svg+='<text x="'+(padL+plotW+6)+'" y="'+(yy+4)+'" fill="#FFB020" font-size="11" text-anchor="start">'+Math.round(pct.mn+(pct.mx-pct.mn)*fr)+'</text>'; }
+  }
+  var step=Math.max(1,Math.ceil(n/6));
+  weights.forEach(function(d,i){ if(i%step===0||i===n-1){ svg+='<text x="'+x(i).toFixed(1)+'" y="'+(H-8)+'" fill="#8A93A0" font-size="11" text-anchor="middle">'+fmtDate(d.date)+'</text>'; } });
+  SERIES.forEach(function(s){ if(!show[s.key]) return; var useR=s.axis==="pct"; if(useR&&!pct) return;
+    var pts=[]; weights.forEach(function(d,i){ if(d[s.key]!=null) pts.push([x(i),(useR?yR(d[s.key]):yL(d[s.key]))]); });
+    if(!pts.length) return;
+    var path=pts.map(function(p){ return p[0].toFixed(1)+","+p[1].toFixed(1); }).join(" ");
+    svg+='<polyline points="'+path+'" fill="none" stroke="'+s.color+'" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>';
+    pts.forEach(function(p){ svg+='<circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="3" fill="'+s.color+'"/>'; });
+  });
+  svg+='</svg>';
+  el.innerHTML=svg;
+}
+function drawHistory(){
+  var h=document.getElementById("wHistory");
+  h.innerHTML=weights.slice().reverse().map(function(e){
+    var extra="";
+    if(e.muscle!=null) extra+='<span class="tnum" style="font-size:12px; color:#3FE08F">'+e.muscle+' musc</span>';
+    if(e.bodyfat!=null) extra+='<span class="tnum" style="font-size:12px; color:#FFB020">'+e.bodyfat+'% bf</span>';
+    if(e.fatmass!=null) extra+='<span class="tnum" style="font-size:12px; color:#6FA8C9">'+e.fatmass+' fat</span>';
+    return '<div class="row"><div style="display:flex; align-items:baseline; gap:12px; flex-wrap:wrap">'+
+      '<span style="font-weight:800; font-size:13px; min-width:56px">'+fmtDate(e.date)+'</span>'+
+      '<span class="tnum" style="font-size:13px; color:#FF6A2C; font-weight:700">'+e.weight+' kg</span>'+extra+'</div>'+
+      '<button class="delx" data-date="'+e.date+'">✕</button></div>';
+  }).join("");
+  var dels=h.querySelectorAll(".delx");
+  for(var i=0;i<dels.length;i++){ (function(b){ b.addEventListener("click", function(){
+    weights=weights.filter(function(e){ return e.date!==b.dataset.date; }); save(K.weight,weights); drawWeightBody();
+  }); })(dels[i]); }
+}
+
+/* ===================== GEAR (log + reminder only) ===================== */
+function renderGearTab(){
+  var html='<div class="rise narrow">';
+  html+='<div class="card" style="margin-bottom:16px"><div class="anton" style="font-size:18px; color:var(--molten); margin-bottom:4px">WHAT I\'M RUNNING</div>'+
+    '<div style="font-size:11px; color:var(--steel); margin-bottom:13px">Type each compound and your dose. Up to four.</div>';
+  for(var c=0;c<4;c++){
+    html+='<div class="gcompound"><input class="winput" id="gName'+c+'" placeholder="Compound '+(c+1)+'" value="'+esc(gear.compounds[c]?gear.compounds[c].name:"")+'">'+
+      '<input class="winput" id="gDose'+c+'" placeholder="Dose" value="'+esc(gear.compounds[c]?gear.compounds[c].dose:"")+'"></div>';
+  }
+  html+='</div>';
+  html+='<div class="card" style="margin-bottom:16px"><div class="anton" style="font-size:18px; color:var(--molten); margin-bottom:13px">INJECTION SCHEDULE</div>'+
+    '<div class="wtop" style="margin-bottom:12px">'+
+      '<div><label class="wlabel">INJECTION DATE</label><input class="winput" type="date" id="gDate" value="'+todayStr()+'"></div>'+
+      '<div><label class="wlabel">REMIND EVERY (DAYS)</label><input class="winput" type="number" inputmode="numeric" id="gInterval" value="'+gear.interval+'"></div></div>'+
+    '<button class="btn" id="gLog">LOG INJECTION</button></div>';
+  html+='<div id="gStatus"></div>';
+  html+='<div id="gHistory" style="margin-top:16px; display:flex; flex-direction:column; gap:8px"></div>';
+  html+='<div style="margin-top:18px; font-size:11px; color:var(--steel); line-height:1.5; padding:0 4px">'+
+    '<b style="color:var(--text)">Note:</b> a home-screen web app can\'t fire phone alarms on its own. Use <b style="color:var(--amber)">“Add next dose to Calendar”</b> below to drop a real reminder into your iPhone Calendar with an alert. Keep bloodwork and BP checks regular while you run this.</div>';
+  html+='</div>';
+  content.innerHTML=html;
+
+  for(var c=0;c<4;c++){ (function(i){
+    document.getElementById("gName"+i).addEventListener("input", function(e){ gear.compounds[i].name=e.target.value; save(K.gear,gear); });
+    document.getElementById("gDose"+i).addEventListener("input", function(e){ gear.compounds[i].dose=e.target.value; save(K.gear,gear); });
+  })(c); }
+  document.getElementById("gInterval").addEventListener("input", function(e){ var v=parseInt(e.target.value,10); gear.interval=(isNaN(v)||v<1)?1:v; save(K.gear,gear); drawGearStatus(); });
+  document.getElementById("gLog").addEventListener("click", function(){
+    var date=document.getElementById("gDate").value; if(!date) return;
+    if(gear.log.indexOf(date)===-1){ gear.log.push(date); gear.log.sort(); save(K.gear,gear); }
+    drawGearStatus(); drawGearHistory();
+  });
+  drawGearStatus(); drawGearHistory();
+}
+function drawGearStatus(){
+  var el=document.getElementById("gStatus");
+  if(!gear.log.length){ el.innerHTML='<div class="card" style="text-align:center; color:var(--steel)"><div class="anton" style="font-size:20px; color:#3A3F49">NO DOSES LOGGED</div><div style="font-size:12px; margin-top:6px">Log your first injection to start the schedule.</div></div>'; return; }
+  var last=gear.log[gear.log.length-1];
+  var next=addDays(last, gear.interval);
+  var left=daysBetween(todayStr(), next);
+  var leftTxt = left>1?("in "+left+" days") : left===1?"tomorrow" : left===0?"today" : (Math.abs(left)+" days overdue");
+  var leftColor = left<0?"var(--molten)" : left===0?"var(--amber)" : "var(--text)";
+  el.innerHTML='<div class="card" style="border-color:#FF8A3D55"><div class="statl" style="margin-bottom:6px">NEXT INJECTION</div>'+
+    '<div style="display:flex; align-items:baseline; justify-content:space-between; gap:10px; flex-wrap:wrap">'+
+    '<div class="anton" style="font-size:30px">'+fmtDate(next)+'</div>'+
+    '<div style="font-weight:800; font-size:14px; color:'+leftColor+'">'+leftTxt+'</div></div>'+
+    '<div style="font-size:11px; color:var(--steel); margin-top:8px">Last dose '+fmtDate(last)+' · every '+gear.interval+' days · '+gear.log.length+' logged</div>'+
+    '<button class="btn" id="gIcs" style="margin-top:13px">＋ ADD NEXT DOSE TO CALENDAR</button></div>';
+  document.getElementById("gIcs").addEventListener("click", function(){ downloadIcs(next); });
+}
+function drawGearHistory(){
+  var h=document.getElementById("gHistory");
+  if(!gear.log.length){ h.innerHTML=""; return; }
+  h.innerHTML=gear.log.slice().reverse().map(function(date, ri){
+    var num=gear.log.length-ri;
+    return '<div class="row"><div style="display:flex; align-items:baseline; gap:12px">'+
+      '<span class="anton" style="font-size:16px; color:var(--molten)">#'+num+'</span>'+
+      '<span style="font-weight:700; font-size:13px">'+fmtDate(date)+'</span></div>'+
+      '<button class="delx" data-date="'+date+'">✕</button></div>';
+  }).join("");
+  var dels=h.querySelectorAll(".delx");
+  for(var i=0;i<dels.length;i++){ (function(b){ b.addEventListener("click", function(){
+    gear.log=gear.log.filter(function(d){ return d!==b.dataset.date; }); save(K.gear,gear); drawGearStatus(); drawGearHistory();
+  }); })(dels[i]); }
+}
+function downloadIcs(dateStr){
+  var dt=dateStr.replace(/-/g,"");
+  var stamp=new Date().toISOString().replace(/[-:]/g,"").split(".")[0]+"Z";
+  var uid="forge-"+Date.now()+"@theforge";
+  var ics=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//TheForge//Gear//EN","CALSCALE:GREGORIAN","BEGIN:VEVENT",
+    "UID:"+uid,"DTSTAMP:"+stamp,"DTSTART:"+dt+"T090000","DTEND:"+dt+"T091500",
+    "SUMMARY:Injection due","DESCRIPTION:Next dose (logged in THE FORGE)",
+    "BEGIN:VALARM","TRIGGER:-PT30M","ACTION:DISPLAY","DESCRIPTION:Injection due","END:VALARM",
+    "END:VEVENT","END:VCALENDAR"].join("\r\n");
+  var blob=new Blob([ics],{type:"text/calendar"});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement("a"); a.href=url; a.download="injection-"+dateStr+".ics"; document.body.appendChild(a); a.click();
+  document.body.removeChild(a); setTimeout(function(){ URL.revokeObjectURL(url); },1500);
+}
+
+/* ===================== PROTOCOL + backup ===================== */
+function renderProtocolTab(){
+  var secs=[{t:"CARDIO",c:"#FF6A2C",items:PROTOCOL.cardio},{t:"NUTRITION",c:"#FFB020",items:PROTOCOL.nutrition},{t:"GOLDEN RULES",c:"#FF4D2E",items:PROTOCOL.rules}];
+  var html='<div class="rise narrow" style="display:flex; flex-direction:column; gap:14px">';
+  secs.forEach(function(sec){
+    html+='<div class="card" style="padding-bottom:6px"><div class="anton" style="font-size:20px; color:'+sec.c+'; margin-bottom:10px">'+sec.t+'</div>';
+    sec.items.forEach(function(it,i){ html+='<div style="display:flex; gap:10px; padding:8px 0; border-top:'+(i?"1px solid var(--line)":"none")+'"><span style="color:'+sec.c+'; font-weight:800">—</span><span style="font-size:13px; color:#D7DAE0; line-height:1.45">'+it+'</span></div>'; });
+    html+='</div>';
+  });
+  html+='<div class="card"><div class="anton" style="font-size:20px; color:#6FA8C9; margin-bottom:6px">BACKUP</div>'+
+    '<div style="font-size:12px; color:var(--steel); line-height:1.5; margin-bottom:13px">Export saves all your tracking, weigh-ins and gear log to a file. Import restores it on any device.</div>'+
+    '<div style="display:grid; grid-template-columns:1fr 1fr; gap:10px">'+
+    '<button class="btn ghost" id="expBtn">EXPORT BACKUP</button>'+
+    '<button class="btn ghost" id="impBtn">IMPORT BACKUP</button></div>'+
+    '<input type="file" id="impFile" accept="application/json" style="display:none"></div>';
+  html+='</div>';
+  content.innerHTML=html;
+  document.getElementById("expBtn").addEventListener("click", exportBackup);
+  document.getElementById("impBtn").addEventListener("click", function(){ document.getElementById("impFile").click(); });
+  document.getElementById("impFile").addEventListener("change", importBackup);
+}
+function exportBackup(){
+  var data={ tracker:tracker, weights:weights, gear:gear, v:1 };
+  var blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement("a"); a.href=url; a.download="forge-backup-"+todayStr()+".json"; document.body.appendChild(a); a.click();
+  document.body.removeChild(a); setTimeout(function(){ URL.revokeObjectURL(url); },1500);
+}
+function importBackup(e){
+  var f=e.target.files[0]; if(!f) return;
+  var r=new FileReader();
+  r.onload=function(){ try{ var d=JSON.parse(r.result);
+    if(d.tracker) tracker=d.tracker; if(d.weights) weights=d.weights; if(d.gear) gear=d.gear;
+    save(K.tracker,tracker); save(K.weight,weights); save(K.gear,gear);
+    renderHeader(); renderTab(); alert("Backup restored.");
+  }catch(err){ alert("Couldn't read that file."); } };
+  r.readAsText(f);
+}
+
+/* ===================== boot ===================== */
+renderHeader();
+renderTab();
+</script>
+</body>
+</html>
